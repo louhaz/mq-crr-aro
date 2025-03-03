@@ -23,7 +23,7 @@ spec:
           sync-wave: "200"
   template:
     metadata:
-      name: '{{name}}'
+      name: 'frankfurt-{{name}}'
       labels:
         group: applications
       annotations:
