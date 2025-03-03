@@ -5,22 +5,23 @@ metadata:
 spec:
   queueManager:
     availability:
-      nativeHAGroups:
+      nativeHAGroups:    
         local:
-            name: recovery_group
-            role: Recovery
+            name: live_group
+            role: Live
             tls:
                 key:
                     items:
                       - tls.key
                       - tls.crt
-                    secretName: NHACRR_recovery_ext
+                    secretName: NHACRR_live_ext
         remotes: 
             addresses:  
-                  - "<livegrouphost:port>"
-            name: live_group
+                  - "<recoverygrouphost:port>"
+            name: recovery_group
             trust: 
                   - secret:   
                       items:
                         - tls.crt       
-                      secretName: NHACRR_live_ext
+                      secretName: NHACRR_recovery_ext
+              
