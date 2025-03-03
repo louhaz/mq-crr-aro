@@ -16,7 +16,7 @@ spec:
           namespace: cert-utils-operator
   template:
     metadata:
-      name: '{{name}}-operator'
+      name: 'madrid-{{name}}-operator'
       labels:
         group: applications
       annotations:
