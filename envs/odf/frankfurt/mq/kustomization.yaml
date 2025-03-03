@@ -1,0 +1,10 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+components:
+- ../../../../components/mq/variants/cloudprovider/odf
+- ../../../../components/mq/variants/nonprod
+- ../../../../components/mq/variants/region/frankfurt
+
+resources:
+- ../../../../components/mq/base

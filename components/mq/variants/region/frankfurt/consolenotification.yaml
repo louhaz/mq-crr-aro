@@ -1,0 +1,9 @@
+apiVersion: console.openshift.io/v1
+kind: ConsoleNotification
+metadata:
+  name: frankfurt
+spec:
+  text: This is the Frankfurt cluster.
+  location: BannerTop 
+  color: '#fff'
+  backgroundColor: '#0088ce'
