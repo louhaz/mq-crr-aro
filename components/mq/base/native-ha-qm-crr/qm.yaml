@@ -60,7 +60,9 @@ spec:
     resources:
       limits:
         memory: 2Gi
+        cpu: 500m
       requests:
+        cpu: 500m
         memory: 1Gi
     mqsc:
       - configMap:
