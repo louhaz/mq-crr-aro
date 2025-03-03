@@ -7,21 +7,20 @@ spec:
     availability:
       nativeHAGroups:    
         local:
-            name: live_group
-            role: Live
-            tls:
-                key:
-                    items:
-                      - tls.key
-                      - tls.crt
-                    secretName: NHACRR_live_ext
+          name: live_group
+          role: Live
+          tls:
+            key:
+              secretName: mq-external-tls-secret
+              items:
+                - tls.key
+                - tls.crt
         remotes: 
-            addresses:  
-                  - "<recoverygrouphost:port>"
+          - addresses: 
+            - native-ha-qm-crr-ibm-mq-nhacrr-cp4i.apps.67c1cdecbf028633dde83ab1.ocp.techzone.ibm.com:443
             name: recovery_group
             trust: 
-                  - secret:   
-                      items:
-                        - tls.crt       
-                      secretName: NHACRR_recovery_ext
-              
+              - secret: 
+                  secretName: NHACRR_recovery_ext
+                  items:
+                    - tls.crt

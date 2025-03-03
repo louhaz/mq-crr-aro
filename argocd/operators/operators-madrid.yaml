@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: cp4i-operators
+  name: operators-madrid
 spec:
   generators:
   - list:
@@ -12,8 +12,6 @@ spec:
           namespace: cp4i
         - name: mq
           namespace: cp4i
-        - name: openshift-logging
-          namespace: openshift-logging
         - name: cert-utils
           namespace: cert-utils-operator
   template:

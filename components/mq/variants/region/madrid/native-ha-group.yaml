@@ -20,7 +20,8 @@ spec:
             - example.com:443
             name: live_group
         trust: 
-          - secret:   
+          - secret:
+              secretName: mq-external-tls-secret   
               items:
               - tls.crt       
-            secretName: mq-external-tls-secret
+            
