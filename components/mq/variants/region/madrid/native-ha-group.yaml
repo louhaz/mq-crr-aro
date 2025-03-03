@@ -11,10 +11,10 @@ spec:
           role: Recovery
           tls:
             key:
+              secretName: mq-external-tls-secret
               items:
                 - tls.key
                 - tls.crt
-            secretName: mq-external-tls-secret
         remotes: 
           - addresses:  
             - example.com:443
