@@ -12,12 +12,8 @@ resources:
 
   - operators/all-operators.yaml
 
-  - operands/operands-frankfurt.yaml
-  - operands/operands-madrid.yaml
-  
-  #- operands/all-operands.yaml
- 
-  #- apis-and-products.yaml
+  #- operands/operands-frankfurt.yaml
+  #- operands/operands-madrid.yaml
 
 patches:
 - target:
@@ -27,7 +23,7 @@ patches:
   patch: |-
     - op: add
       path: /spec/source/repoURL
-      value: https://github.com/Nordic-MVP-GitOps-Repos/hypersonic-lightweight-cp4i.git
+      value: https://github.com/Nordic-MVP-GitOps-Repos/mq-crr.git
     - op: add
       path: /spec/source/targetRevision
       value: HEAD
@@ -37,7 +33,7 @@ patches:
   patch: |-
     - op: add
       path: /spec/template/spec/source/repoURL
-      value: https://github.com/Nordic-MVP-GitOps-Repos/hypersonic-lightweight-cp4i.git
+      value: https://github.com/Nordic-MVP-GitOps-Repos/mq-crr.git
     - op: add
       path: /spec/template/spec/source/targetRevision
       value: HEAD
