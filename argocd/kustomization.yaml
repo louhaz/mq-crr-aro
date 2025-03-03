@@ -14,7 +14,7 @@ resources:
 
   - common-frankfurt.yaml
   - operators/operators-frankfurt.yaml
-  #- operands/operands-frankfurt.yaml
+  - operands/operands-frankfurt.yaml
  
 patches:
 - target:
