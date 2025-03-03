@@ -11,7 +11,7 @@ spec:
           role: Live
           tls:
             key:
-              secretName: default-cert-copy
+              secretName: mq-external-tls
               items:
                 - tls.key
                 - tls.crt
@@ -21,6 +21,6 @@ spec:
             name: recovery_group
             trust: 
               - secret: 
-                  secretName: letsencrypt-chain
+                  secretName: recovery-external-tls
                   items:
                     - ca.crt
