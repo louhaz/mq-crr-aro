@@ -21,6 +21,6 @@ spec:
             name: recovery_group
             trust: 
               - secret: 
-                  secretName: NHACRR_recovery_ext
+                  secretName: mq-external-tls-secret
                   items:
                     - tls.crt
