@@ -16,11 +16,11 @@ spec:
                 - tls.crt
             secretName: NHACRR_recovery_ext
         remotes: 
-          addresses:  
+          - addresses:  
             - "<livegrouphost:port>"
-          name: live_group
-          trust: 
-            - secret:   
-                items:
-                - tls.crt       
-              secretName: NHACRR_live_ext
+            name: live_group
+        trust: 
+          - secret:   
+              items:
+              - tls.crt       
+            secretName: NHACRR_live_ext
