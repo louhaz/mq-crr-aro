@@ -11,7 +11,7 @@ spec:
           role: Recovery
           tls:
             key:
-              secretName: mq-external-tls
+              secretName: default-cert-copy
               items:
                 - tls.key
                 - tls.crt
@@ -19,9 +19,9 @@ spec:
           - addresses:  
             - native-ha-qm-crr-ibm-mq-nhacrr-cp4i.apps.67c1cda6bf028633dde83ab0.eu1.techzone.ibm.com:443
             name: live_group
-        trust: 
-          - secret:
-              secretName: live-external-tls   
-              items:
-              - ca.crt       
-            
+            trust: 
+              - secret:
+                  secretName: letsencrypt-chain   
+                  items:
+                  - ca.crt       
+                
