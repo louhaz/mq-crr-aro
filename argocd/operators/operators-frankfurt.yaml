@@ -26,7 +26,7 @@ spec:
       source:
         path: 'components/{{name}}/operator'
       destination:
-        server: https://kubernetes.default.svc
+        server: https://api.67c1cda6bf028633dde83ab0.eu1.techzone.ibm.com:6443
         namespace: '{{namespace}}'
       syncPolicy:
         automated:
