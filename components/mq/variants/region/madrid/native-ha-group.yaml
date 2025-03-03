@@ -7,20 +7,20 @@ spec:
     availability:
       nativeHAGroups:
         local:
-            name: recovery_group
-            role: Recovery
-            tls:
-                key:
-                    items:
-                      - tls.key
-                      - tls.crt
-                    secretName: NHACRR_recovery_ext
+          name: recovery_group
+          role: Recovery
+          tls:
+            key:
+              items:
+                - tls.key
+                - tls.crt
+            secretName: NHACRR_recovery_ext
         remotes: 
-            addresses:  
-                  - "<livegrouphost:port>"
-            name: live_group
-            trust: 
-                  - secret:   
-                      items:
-                        - tls.crt       
-                      secretName: NHACRR_live_ext
+          addresses:  
+            - "<livegrouphost:port>"
+          name: live_group
+          trust: 
+            - secret:   
+                items:
+                - tls.crt       
+              secretName: NHACRR_live_ext
