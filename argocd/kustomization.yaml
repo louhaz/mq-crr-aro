@@ -9,7 +9,7 @@ resources:
   - cp4i-argo-rb.yaml
 
   - common-madrid.yaml
-  - operators/operators-madrid.yaml
+  #- operators/operators-madrid.yaml
   #- operands/operands-madrid.yaml
 
   - common-frankfurt.yaml
