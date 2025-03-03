@@ -10,7 +10,7 @@ resources:
 
   - common-madrid.yaml
   - operators/operators-madrid.yaml
-  - operands/operands-madrid.yaml
+  #- operands/operands-madrid.yaml
 
   - common-frankfurt.yaml
   - operators/operators-frankfurt.yaml
