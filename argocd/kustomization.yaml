@@ -13,7 +13,7 @@ resources:
   - operands/operands-madrid.yaml
 
   - common-frankfurt.yaml
-  #- operators/operators-frankfurt.yaml
+  - operators/operators-frankfurt.yaml
   #- operands/operands-frankfurt.yaml
  
 patches:
