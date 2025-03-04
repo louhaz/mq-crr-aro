@@ -9,7 +9,7 @@ resources:
   - cp4i-argo-rb.yaml
 
   - common.yaml
-  #- operators/operators.yaml
+  - operators/operators.yaml
   #- operands/operands.yaml
  
 patches:
