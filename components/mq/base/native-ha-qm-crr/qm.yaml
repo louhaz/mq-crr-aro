@@ -84,11 +84,16 @@ spec:
             - tls.key
             - tls.crt
     trust:
-      - name: trust
+      - name: lec-trust
         secret:
           secretName: letsencrypt-chain
           items:
             #- tls.crt
+            - ca.crt
+      - name: internal-trust
+        secret:
+          secretName: mq-external-tls-secret
+          items:
             - ca.crt
   web:
     enabled: true
