@@ -84,13 +84,13 @@ spec:
             - tls.key
             - tls.crt
     trust:
-      - name: lec-trust
+      - name: lec
         secret:
           secretName: letsencrypt-chain
           items:
             #- tls.crt
             - ca.crt
-      - name: internal-trust
+      - name: internal
         secret:
           secretName: mq-external-tls-secret
           items:
