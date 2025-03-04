@@ -10,7 +10,7 @@ resources:
 
   - common.yaml
   - operators/operators.yaml
-  #- operands/operands.yaml
+  - operands/operands.yaml
  
 patches:
 - target:
