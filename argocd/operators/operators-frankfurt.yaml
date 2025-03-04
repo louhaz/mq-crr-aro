@@ -8,8 +8,6 @@ spec:
       elements:
         - name: openshift-cert-manager
           namespace: cert-manager-operator
-        - name: platformnavigator
-          namespace: cp4i
         - name: mq
           namespace: cp4i
         - name: cert-utils
