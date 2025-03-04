@@ -7,7 +7,7 @@ spec:
     availability:
       nativeHAGroups:
         local:
-          name: recovery_group
+          name: madrid
           role: Live
           tls:
             key:
@@ -18,7 +18,7 @@ spec:
         remotes: 
           - addresses:  
             - native-ha-qm-crr-ibm-mq-nhacrr-cp4i.apps.67c1cda6bf028633dde83ab0.eu1.techzone.ibm.com:443
-            name: live_group
+            name: frankfurt
             trust: 
               - secret:
                   secretName: letsencrypt-chain   
