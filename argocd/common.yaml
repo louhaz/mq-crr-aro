@@ -12,7 +12,7 @@ spec:
             clusterUrl: https://api.67c1cda6bf028633dde83ab0.eu1.techzone.ibm.com:6443
   template:
     metadata:
-      name: 'common-{{cluster}}'
+      name: '{{cluster}}-common'
       namespace: openshift-gitops
       labels:
         group: applications
