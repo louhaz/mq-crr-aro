@@ -79,7 +79,7 @@ spec:
     keys:
       - name: default
         secret:
-          secretName: default-cert-copy
+          secretName: mq-external-tls-secret
           items:
             - tls.key
             - tls.crt
@@ -89,11 +89,6 @@ spec:
           secretName: mq-external-tls-secret
           items:
             - tls.crt
-            - ca.crt
-      - name: letsencrypt
-        secret:
-          secretName: letsencrypt-chain
-          items:
             - ca.crt
   web:
     enabled: true
