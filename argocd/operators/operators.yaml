@@ -1,0 +1,39 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: operators
+spec:
+  generators:
+  - matrix:
+    generators:
+      - list:
+          elements:
+            - name: openshift-cert-manager
+              namespace: cert-manager-operator
+            - name: mq
+              namespace: cp4i
+            - name: cert-utils
+              namespace: cert-utils-operator
+      - list:
+          elements:
+            - cluster: madrid
+              url: https://kubernetes.default.svc
+            - cluster: frankfurt
+              url: https://api.67c1cda6bf028633dde83ab0.eu1.techzone.ibm.com:6443
+  template:
+    metadata:
+      name: '{{cluster}}-{{name}}-operator'
+      labels:
+        group: applications
+      annotations:
+        argocd.argoproj.io/sync-wave: "100"
+    spec:
+      project: cp4i-operators
+      source:
+        path: 'components/{{name}}/operator'
+      destination:
+        server: {{url}}
+        namespace: '{{namespace}}'
+      syncPolicy:
+        automated:
+          selfHeal: true
