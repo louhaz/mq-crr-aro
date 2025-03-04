@@ -6,9 +6,6 @@ spec:
   generators:
   - list:
       elements:
-        - name: platformnavigator
-          namespace: cp4i
-          sync-wave: "200"
         - name: mq
           namespace: cp4i
           sync-wave: "300"
