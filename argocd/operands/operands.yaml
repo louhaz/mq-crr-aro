@@ -1,0 +1,39 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: operands-madrid
+spec:
+  generators:
+     - matrix:
+        generators:
+          - list:
+              elements:
+                - name: mq
+                  namespace: cp4i
+                  sync-wave: "300"
+                - name: reloader
+                  namespace: cp4i
+                  sync-wave: "200"
+          - list:
+              elements:
+                - cluster: madrid
+                  clusterUrl: https://kubernetes.default.svc
+                - cluster: frankfurt
+                  clusterUrl: https://api.67c1cda6bf028633dde83ab0.eu1.techzone.ibm.com:6443        
+  template:
+    metadata:
+      name: '{{cluster}}-{{name}}'
+      labels:
+        group: applications
+      annotations:
+        argocd.argoproj.io/sync-wave: '{{sync-wave}}'
+    spec:
+      project: cp4i-operands
+      source:
+        path: 'envs/odf/{{cluster}}/{{name}}/'
+      destination:
+        server: '{{clusterUrl}}'
+        namespace: '{{namespace}}'
+      syncPolicy:
+        automated:
+          selfHeal: true

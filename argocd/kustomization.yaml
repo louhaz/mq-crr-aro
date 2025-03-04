@@ -8,15 +8,9 @@ resources:
   - cp4i-argo-role.yaml
   - cp4i-argo-rb.yaml
 
-  #- common-madrid.yaml
+  - common.yaml
   - operators/operators.yaml
-  
-  #- operators/operators-madrid.yaml
-  #- operands/operands-madrid.yaml
-
-  #- common-frankfurt.yaml
-  #- operators/operators-frankfurt.yaml
-  #- operands/operands-frankfurt.yaml
+  - operands/operands.yaml
  
 patches:
 - target:
