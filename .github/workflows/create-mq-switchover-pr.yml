@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Change between live/recovery for MQ
-        run: find envs -type f -name 'kustomization.yaml' -print0 | xargs -0 sed -i "" 's,variants/crr/live,SEDREPLACE,g;s,variants/crr/recovery,variants/crr/live,g;s,SEDREPLACE,variants/crr/recovery,g'  
+        run: find envs -type f -name 'kustomization.yaml' -print0 | xargs -0 sed -i 's,variants/crr/live,SEDREPLACE,g;s,variants/crr/recovery,variants/crr/live,g;s,SEDREPLACE,variants/crr/recovery,g'  
       - name: Commit changes
         run: |
           git config --global user.name ${GITHUB_ACTOR}
