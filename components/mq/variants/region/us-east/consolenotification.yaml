@@ -1,0 +1,9 @@
+apiVersion: console.openshift.io/v1
+kind: ConsoleNotification
+metadata:
+  name: madrid
+spec:
+  text: This is the cluster in us-east.
+  location: BannerTop 
+  color: '#fff'
+  backgroundColor: '#0088ce'
