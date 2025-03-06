@@ -16,11 +16,11 @@ jobs:
         run: find envs -type f -name 'kustomization.yaml' -print0 | xargs -0 sed -i 's,variants/crr/live,SEDREPLACE,g;s,variants/crr/recovery,variants/crr/live,g;s,SEDREPLACE,variants/crr/recovery,g'  
       - name: Commit changes
         run: |
-          git config --global user.name ${GITHUB_ACTOR}
-          git config --global user.email '${GITHUB_ACTOR_ID}@users.noreply.github.com'
+          git config --global user.name $GITHUB_ACTOR
+          EMAIL=$GITHUB_ACTOR_ID@users.noreply.github.com git config --global user.email $EMAIL
           git checkout -b mq-crr-switchover
           git commit -am "MQ region switchover"
-          git push
+          git push --set-upstream origin tma
       - name: Create PR
         run: gh pr create -B main -H mq-crr-switchover --title 'Switch region for MQ' --body 'Generated PR for switching between live and recovery regions'
         env:
