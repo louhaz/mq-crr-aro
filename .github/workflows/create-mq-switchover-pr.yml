@@ -10,7 +10,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-        ref: tma
+        with:
+          ref: tma
       - name: Change between live/recovery for MQ
         run: find envs -type f -name 'kustomization.yaml' -print0 | xargs -0 sed -i 's,variants/crr/live,SEDREPLACE,g;s,variants/crr/recovery,variants/crr/live,g;s,SEDREPLACE,variants/crr/recovery,g'  
       - name: Commit changes
