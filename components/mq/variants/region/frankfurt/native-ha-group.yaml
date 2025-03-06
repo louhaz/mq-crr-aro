@@ -8,7 +8,7 @@ spec:
       nativeHAGroups:    
         local:
           name: frankfurt
-          role: Recovery
+          role: Live
           tls:
             key:
               secretName: default-cert-copy
