@@ -20,7 +20,7 @@ jobs:
           git config --global user.email "${{ github.actor.id }}@users.noreply.github.com"
           git checkout -b mq-crr-switchover
           git commit -am "MQ region switchover"
-          git push --set-upstream origin tma
+          git push --set-upstream origin mq-crr-switchover
       - name: Create PR
         run: gh pr create -B main -H mq-crr-switchover --title 'Switch region for MQ' --body 'Generated PR for switching between live and recovery regions'
         env:
