@@ -8,7 +8,6 @@ spec:
       nativeHAGroups:
         local:
           name: madrid
-          role: Recovery
           tls:
             key:
               secretName: default-cert-copy
