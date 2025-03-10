@@ -16,9 +16,9 @@ spec:
                   namespace: cert-utils-operator
           - list:
               elements:
-                - cluster: madrid
+                - cluster: europe-west
                   clusterUrl: https://kubernetes.default.svc
-                - cluster: frankfurt
+                - cluster: us-east
                   clusterUrl: https://api.67c1cda6bf028633dde83ab0.eu1.techzone.ibm.com:6443
   template:
     metadata:
