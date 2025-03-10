@@ -16,9 +16,9 @@ spec:
                   sync-wave: "200"
           - list:
               elements:
-                - cluster: madrid
+                - cluster: europe-west
                   clusterUrl: https://kubernetes.default.svc
-                - cluster: frankfurt
+                - cluster: us-east
                   clusterUrl: https://api.67c1cda6bf028633dde83ab0.eu1.techzone.ibm.com:6443        
   template:
     metadata:
@@ -30,7 +30,7 @@ spec:
     spec:
       project: cp4i-operands
       source:
-        path: 'envs/odf/{{cluster}}/{{name}}/'
+        path: 'envs/azure/{{cluster}}/{{name}}/'
       destination:
         server: '{{clusterUrl}}'
         namespace: '{{namespace}}'
