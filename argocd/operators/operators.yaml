@@ -4,25 +4,17 @@ metadata:
   name: operators
 spec:
   generators:
-    - matrix:
-        generators:
-          - list:
-              elements:
-                - name: openshift-cert-manager
-                  namespace: cert-manager-operator
-                - name: mq
-                  namespace: cp4i
-                - name: cert-utils
-                  namespace: cert-utils-operator
-          - list:
-              elements:
-                - cluster: europe-west
-                  clusterUrl: https://kubernetes.default.svc
-                - cluster: us-east
-                  clusterUrl: https://api.67c1cda6bf028633dde83ab0.eu1.techzone.ibm.com:6443
+    - list:
+        elements:
+          - name: openshift-cert-manager
+            namespace: cert-manager-operator
+          - name: mq
+            namespace: cp4i
+          - name: cert-utils
+            namespace: cert-utils-operator
   template:
     metadata:
-      name: '{{cluster}}-{{name}}-operator'
+      name: '{{name}}-operator'
       labels:
         group: applications
       annotations:
@@ -32,7 +24,6 @@ spec:
       source:
         path: 'components/{{name}}/operator'
       destination:
-        server: '{{clusterUrl}}'
         namespace: '{{namespace}}'
       syncPolicy:
         automated:
