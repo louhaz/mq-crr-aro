@@ -7,8 +7,7 @@ spec:
     availability:
       nativeHAGroups:
         local:
-          name: europe-west
-          role: Live
+          name: us-west
           tls:
             key:
               secretName: default-cert-copy
@@ -17,11 +16,11 @@ spec:
                 - tls.crt
         remotes: 
           - addresses:  
-            - native-ha-qm-crr-ibm-mq-nhacrr-cp4i.apps.67c1cda6bf028633dde83ab0.eu1.techzone.ibm.com:443
+            - native-ha-qm-crr-ibm-mq-nhacrr-cp4i.apps.jeh876t2.eastus.aroapp.io:443
             name: us-east
             trust: 
               - secret:
-                  secretName: letsencrypt-chain   
+                  secretName: default-cert-copy  
                   items:
                   - ca.crt       
                 
