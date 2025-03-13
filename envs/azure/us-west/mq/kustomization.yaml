@@ -4,7 +4,7 @@ kind: Kustomization
 components:
 - ../../../../components/mq/variants/cloudprovider/azure
 - ../../../../components/mq/variants/nonprod
-- ../../../../components/mq/variants/region/europe-west
+- ../../../../components/mq/variants/region/us-west
 
 resources:
 - ../../../../components/mq/base

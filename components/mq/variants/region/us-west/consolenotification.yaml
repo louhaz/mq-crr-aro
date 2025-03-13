@@ -1,9 +1,9 @@
 apiVersion: console.openshift.io/v1
 kind: ConsoleNotification
 metadata:
-  name: madrid
+  name: us-west
 spec:
-  text: This is the cluster in europe-west.
+  text: This is the cluster in us-west.
   location: BannerTop 
   color: '#fff'
-  backgroundColor: '#0088ce'
+  backgroundColor: '#ce8800'
