@@ -3,12 +3,10 @@ kind: Kustomization
 
 resources:
 
-  - ../../operators/operator-project.yaml
-  - ../../operands/operand-project.yaml
+  - ../../operators
   - ../../common
 
-  - ../../operators/operators.yaml
-  - ../../operands/operands-us-west.yaml
+  - ../../operands/us-west
  
 patches:
 - target:
