@@ -4,10 +4,9 @@ kind: Kustomization
 resources:
 
   - ../../operators
-  - ../../operands/operand-project.yaml
   - ../../common
 
-  - ../../operands/us-east/operands.yaml
+  - ../../operands/us-east
  
 patches:
 - target:
