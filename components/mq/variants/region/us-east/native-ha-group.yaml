@@ -20,7 +20,7 @@ spec:
             name: us-west
             trust: 
               - secret:
-                  secretName: deafult-cert-copy   
+                  secretName: default-cert-copy   
                   items:
                   - ca.crt       
                 
