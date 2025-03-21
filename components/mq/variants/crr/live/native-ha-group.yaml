@@ -7,5 +7,5 @@ spec:
     availability:
       nativeHAGroups:
         local:
-          role: Live
+          role: Recovery
                 
