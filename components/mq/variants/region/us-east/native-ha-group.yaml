@@ -16,7 +16,7 @@ spec:
                 - tls.crt
         remotes: 
           - addresses:  
-            - native-ha-qm-crr-ibm-mq-nhacrr-cp4i.apps.avly7wz7.westus.aroapp.io:443
+              - PATCHED_BY_KUSTOMIZE
             name: us-west
             trust: 
               - secret:
