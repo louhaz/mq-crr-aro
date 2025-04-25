@@ -16,7 +16,7 @@ spec:
                 - tls.crt
         remotes: 
           - addresses:  
-            - native-ha-qm-crr-ibm-mq-nhacrr-cp4i.apps.jeh876t2.eastus.aroapp.io:443
+              - PATCHED_BY_KUSTOMIZE
             name: us-east
             trust: 
               - secret:
